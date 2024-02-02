@@ -1,0 +1,11 @@
+version: 1
+common:
+  resourcesPath: ./components/
+apps:
+  - appID: subscriber
+    appDirPath: ./supplier_1_subscribe/
+    appPort: 6002
+    command: ["uvicorn", "app:app"]
+  - appID: publisher
+    appDirPath: ./product_details_publisher/
+    command: ["python3", "app.py"]
